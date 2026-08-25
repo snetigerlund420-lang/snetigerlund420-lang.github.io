@@ -1,0 +1,49 @@
+# ── Edit these ──────────────────────────────────────────────
+title: "Joakim"                     # your name, shown in the header
+tagline: "Data Science @ Aarhus University"
+email: "you@example.com"
+github_url: "https://github.com/yourusername"
+linkedin_url: "https://linkedin.com/in/yourusername"
+cv_url: "/assets/cv.pdf"            # drop a CV PDF into assets/ and point here, or leave as-is and remove the link in _includes/header.html
+description: >-
+  Portfolio and technical notes for a Data Science student working
+  toward quantitative finance.
+# ────────────────────────────────────────────────────────────
+
+baseurl: ""     # leave "" if this repo is named yourusername.github.io
+                # if instead the repo is named e.g. "portfolio", set this to "/portfolio"
+url: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+  writeups:
+    output: true
+    permalink: /notes/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "writeups"
+    values:
+      layout: "writeup"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
