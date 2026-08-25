@@ -1,0 +1,10 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</span>
+    <span>
+      {% if site.email %}<a href="mailto:{{ site.email }}">{{ site.email }}</a> · {% endif %}
+      {% if site.github_url %}<a href="{{ site.github_url }}">GitHub</a> · {% endif %}
+      {% if site.linkedin_url %}<a href="{{ site.linkedin_url }}">LinkedIn</a>{% endif %}
+    </span>
+  </div>
+</footer>
